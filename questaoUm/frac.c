@@ -27,6 +27,17 @@ Frac* criaFracao(int a, int b){
     return retorno;
 }
 
+void modificaDenominadorFracao(Frac* frac, int b){
+    if (frac != NULL) {
+        frac->denominador = b;
+    }
+}
+void modificaNumeradorFracao(Frac* frac, int a){
+    if (frac != NULL) {
+        frac->numerador = a;
+    }
+}
+
 void liberaFracao(Frac* liberar){
     free(liberar);
     liberar=NULL;
