@@ -121,6 +121,7 @@ Frac* multiplicaFracao(Frac* a, Frac* b){
     int novoDen = a->denominador * b->denominador;
 
     Frac* result = criaFracao(novoNum, novoDen);
+    simplificaFracao(result);
     return result;
 }
 
@@ -131,5 +132,6 @@ Frac* divideFracao(Frac* a, Frac* b){
     int novoDen = a->denominador * b->numerador;
 
     Frac* result = criaFracao(novoNum, novoDen);
+    simplificaFracao(result);
     return result;
 }
