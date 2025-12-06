@@ -1,5 +1,5 @@
+#pragma once
 typedef struct frac Frac;
-
 Frac* criaFracao(int a, int b);
 void modificaDenominadorFracao(Frac* frac, int b);
 void modificaNumeradorFracao(Frac* frac, int a);

@@ -48,3 +48,45 @@ void liberaMatriz(Matriz* m){
     free(m->vetores);
     free(m);
 }
+Matriz* somaMatrizes(Matriz* m, Matriz*n){
+    int linhas, colunas;
+    linhas= m->linhas;
+    colunas=m->colunas;
+    //para a resultado
+    Matriz * resultado=criaMatriz(linhas,colunas);
+    resultado->linhas=linhas;
+    resultado->colunas=colunas;
+    //supondo que o user sabe os pré requisitos 
+    int soma=0;
+    //anda os vetores 
+    for(int i=0; i<linhas; i++){
+        // anda os inidices dos vetoress
+        for (int j=0;j<colunas;j++){
+            soma =  m->vetores[i][j] + n->vetores[i][j];
+            resultado->vetores[i][j]=soma;
+            soma=0;
+        }
+    }
+    return resultado;
+}
+Matriz* subtraiMatrizes(Matriz* m, Matriz*n){
+    int linhas, colunas;
+    linhas= m->linhas;
+    colunas=m->colunas;
+    //para a resultado
+    Matriz * resultado=criaMatriz(linhas,colunas);
+    resultado->linhas=linhas;
+    resultado->colunas=colunas;
+    //supondo que o user sabe os pré requisitos 
+    int subtrai=0;
+    //anda os vetores 
+    for(int i=0; i<linhas; i++){
+        // anda os inidices dos vetoress
+        for (int j=0;j<colunas;j++){
+            subtrai =  m->vetores[i][j] - n->vetores[i][j];
+            resultado->vetores[i][j]=subtrai;
+            subtrai=0;
+        }
+    }
+    return resultado;
+}
